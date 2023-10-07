@@ -1,12 +1,13 @@
+import ProductItem from '@/components/Productitem';
 import { data } from '@/utilis/data';
-import Image from 'next/image'
+
 
 export default function Home() {
   const {products} = data
   return (
-    <div>
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
       {products.map((product) => (
-        <div key={product.id}>{product.name}</div>
+          <ProductItem key={product.id} product={product} />
       ))}
     </div>
   );
