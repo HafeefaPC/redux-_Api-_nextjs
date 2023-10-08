@@ -2,8 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import ProductRate from './ProductRate'
-import AddToCart from './AddToCart';
-
+import AddToCart from './AddToCart'
 
 export default function ProductItem({ product }) {
   return (
