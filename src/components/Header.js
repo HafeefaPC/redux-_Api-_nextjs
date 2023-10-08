@@ -19,7 +19,9 @@ export default function Header() {
           </span>
           <Link href="/cart" className="flex justify-between items-end">
            Cart</Link>
-          
+          {!loading && cartItems.length > 0 && pathname !== '/cart' && (
+            <div className="caret"></div>
+          )}
         </div>
       </nav>
     </header>

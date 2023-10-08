@@ -23,7 +23,12 @@ export default function ProductItem({ product }) {
         <ProductRate rate={product.rating} count={product.numReviews} />
         <p className="mb-2">{product.brand}</p>
         <p>${product.price}</p>
-        <button>Add to cart</button>
+        <AddToCart
+          showQty={false}
+          product={product}
+          increasePerClick={true}
+          redirect={false}
+        />
       </div>
     </div>
   )
