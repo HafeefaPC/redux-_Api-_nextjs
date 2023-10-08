@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 export default function Header() {
   const { loading, cartItems } = useSelector((state) => state.cart)
-  
+  const pathname = usePathname()
 
   return (
     <header>
@@ -18,7 +18,9 @@ export default function Header() {
             {loading ? '' : cartItems.reduce((a, c) => a + c.qty, 0)}
           </span>
           <Link href="/cart" className="flex justify-between items-end">
-           Cart</Link>
+            
+            Cart
+          </Link>
           {!loading && cartItems.length > 0 && pathname !== '/cart' && (
             <div className="caret"></div>
           )}
