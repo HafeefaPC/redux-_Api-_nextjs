@@ -2,8 +2,14 @@
 
 import CartSidebar from "./CartSidebar"
 import Header from "./Header"
+import { useEffect } from 'react'
+import { hideLoading } from '@/redux/slices/cartSlice'
 
 export default function App({ children}) {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(hideLoading())
+  }, [dispatch])
   return (
     <div>
         <div className='mr-32'>

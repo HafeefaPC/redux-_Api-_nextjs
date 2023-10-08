@@ -43,6 +43,10 @@ const cartSlice = createSlice({
           Number(state.shippingPrice) +
           Number(state.taxPrice)
       )
+      Cookies.set('cart', JSON.stringify(state))
+      },
+      hideLoading: (state) => {
+        state.loading = false
       },
       
     },

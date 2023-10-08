@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 
 export default function Header() {
@@ -11,6 +12,7 @@ export default function Header() {
         </Link>
         <div>
           <span className="cart-badge"></span>
+          {loading ? '' : cartItems.reduce((a, c) => a + c.qty, 0)}
           <Link href="/cart" className="flex justify-between items-end">Cart</Link>
         </div>
       </nav>
