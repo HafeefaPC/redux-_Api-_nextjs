@@ -1,5 +1,6 @@
 import ProductItem from '@/components/Productitem'
 import { data } from '@/utils/data'
+// import RootLayout from './layout'
 
 export default function Home() {
   const { products } = data
